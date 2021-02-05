@@ -1,0 +1,13 @@
+JMO
+JMO/jmo
+JMO/jmo/bin
+JMO/jmo/build
+JMO/jmo/dist
+JMO/jmo/docs
+JMO/jmo/include
+JMO/jmo/lib
+JMO/jmo/lib64 -> lib
+JMO/jmo/__pycache__
+JMO/jmo/share
+
+10 directories

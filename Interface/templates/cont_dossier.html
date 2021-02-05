@@ -1,0 +1,36 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+
+<div>
+    <h1>Liste des fichiers</h1>
+    <nav>
+        <a href="http://localhost:8000/admin" class="btn btn-primary">Administration</a>
+        <a href="http://localhost:8000/dossiers" class="btn btn-primary">Dossiers</a>
+        <a href="http://localhost:8000/liste_Ordo" class="btn btn-primary">Liste ordonnée</a>
+        <a href="http://localhost:8000/new_dossier" class="btn btn-primary">Nouveau Dossier</a>
+        <a href="http://localhost:8000" class="btn btn-primary">Retour à l'accueil</a>
+    </nav>
+    <div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+
+            <tr>
+                <th scope="col">Nom du Dossier</th>
+                <th scope="col">Description</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for dossier in fichier_list %}
+            <tr>
+<!--
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+
+<div>
+    <h1>Liste des fichiers</h1>
+    <nav>
+        <a href="http://localhost:8000/admin" class="btn btn-primary">Administration</a>
+        <a href="http://localhost:8000/dossiers" class="btn btn-primary">Dossiers</a>
+        <a href="http://localhost:8000/liste_Ordo" class="btn btn-primary">Liste ordonnée</a>
+        <a href="http://localhost:8000/new_dossier" class="btn btn-primary">Nouveau Dossier</a>
+        <a href="http://localhost:8000" class="btn btn-primary">Retour à l'accueil</a>
+    </nav>
+    <div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+
+            <tr>
+                <th scope="col">Nom du fichier</th>
+                <th scope="col">Dossier</th>
+                <th scope="col">Date de dépôt</th>
+                <th scope="col">Objet</th>
+                <th scope="col">Version</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for x in fichier %}
+            <tr>
+<!--                <td>{{x.Nom_Fichier}}</td>-->
+                <td><a href="http://localhost:8000" class="btn btn-link">{{x.Nom_Fichier}}</a></td>
+                <td>{{x.Nom_Dossier}}</td>
+                <td>{{x.Date}}</td>
+                <td>{{x.Objet}}</td>
+                <td>{{x.Version}}</td>
+                <td>{{x.Status}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
